@@ -5,6 +5,8 @@
 # Production builds
 **/dist/
 **/build/
+**/dist-ssr/
+**/*.local
 
 # Environment files
 **/.env
@@ -14,7 +16,8 @@
 .DS_Store
 Thumbs.db
 .idea/
-.vscode/
+.vscode/*
+!.vscode/tasks.json
 *.suo
 *.ntvs*
 *.njsproj

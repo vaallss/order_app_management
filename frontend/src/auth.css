@@ -1,0 +1,42 @@
+.topbar-actions { display: flex; align-items: center; gap: 16px; margin-left: auto; }
+.store-actions { display: flex; align-items: center; gap: 8px; }
+.orders-link { position: relative; display: flex; align-items: center; gap: 8px; min-height: 40px; border: 1px solid #e9e7df; border-radius: 10px; padding: 0 12px; background: #fff; color: #45413f; font-size: 11px; font-weight: 600; }
+.orders-link b,.top-cart b { display: grid; place-items: center; min-width: 19px; height: 19px; border-radius: 50%; background: #9d5d63; color: #fff; font-size: 9px; }
+.account-actions { display: flex; align-items: center; gap: 8px; padding-left: 14px; border-left: 1px solid #e9e2e2; }
+.auth-user { display: flex; align-items: center; gap: 9px; min-height: 42px; border: 0; border-radius: 11px; padding: 4px 11px 4px 5px; background: transparent; color: #51474a; text-align: left; }
+.auth-user:hover { background: #f7eeee; }
+.account-avatar { width: 33px; height: 33px; display: grid; place-items: center; flex: 0 0 auto; border-radius: 10px; background: #f3e5e6; color: #985960; }
+.account-copy { display: grid; gap: 2px; }
+.account-copy b { color: #393436; font-size: 11px; font-weight: 600; }
+.account-copy small { color: #928488; font-size: 9px; }
+.auth-login { border: 1px solid #e7d4d6; padding-right: 13px; background: #fff; }
+.auth-login:hover { border-color: #cfaaae; background: #fbf4f4; }
+.auth-login .account-copy b { color: #8f5158; }
+.account-actions.is-authenticated { gap: 4px; }
+.header-logout { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 36px; border: 0; border-radius: 9px; padding: 0 10px; background: transparent; color: #946067; font-size: 10px; font-weight: 600; }
+.header-logout:hover { background: #f7eeee; }
+.login-form { padding: 22px; }
+.login-icon { width: 48px; height: 48px; border-radius: 14px; display: grid; place-items: center; background: #f5e9ea; color: #9d5d63; }
+.login-form > p:not(.form-error) { margin: 12px 0 20px; color: #817879; font-size: 10px; line-height: 1.7; }
+.login-form > label { display: block; margin: 14px 0; color: #696162; font-size: 10px; }
+.login-form input { display: block; width: 100%; margin-top: 6px; border: 1px solid #e9dfdf; border-radius: 8px; padding: 11px; color: #332e2e; font-size: 11px; outline: none; }
+.login-form input:focus { border-color: #b77b80; }
+.login-form .form-error { margin: 10px 0; }
+.login-footnote { display: block; margin-top: 12px; text-align: center; color: #969090; font-size: 9px; }
+@media (max-width: 900px) {
+  .topbar-actions { gap: 10px; }
+  .account-actions { padding-left: 10px; }
+}
+@media (max-width: 620px) {
+  .topbar-actions { width: 100%; justify-content: flex-end; gap: 8px; }
+  .store-actions { gap: 6px; }
+  .orders-link,.top-cart { min-width: 38px; min-height: 38px; justify-content: center; padding: 0 9px; }
+  .orders-link span,.top-cart span { display: none; }
+  .account-actions { gap: 4px; padding-left: 8px; }
+  .auth-user { min-height: 38px; }
+  .auth-login .account-copy small { display: none; }
+  .account-copy b { font-size: 10px; }
+  .account-copy small { font-size: 8px; }
+  .account-avatar { width: 30px; height: 30px; }
+  .header-logout { min-height: 34px; padding: 0 8px; font-size: 9px; }
+}

@@ -1,16 +1,7 @@
-# React + Vite
+# Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+React dan Vite untuk menu pelanggan, dashboard staf, katalog admin, laporan, serta invoice. Referensi fungsi dan alur data ada di [dokumentasi utama](../DOKUMENTASI.md).
 
-Currently, two official plugins are available:
+Jalankan `npm install` sekali, lalu `npm run dev`. Konfigurasi lokal di `.env.local` memilih backend melalui `VITE_DATA_SOURCE=api` dan `VITE_API_URL=http://localhost:8000/api`.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+Untuk mode tanpa API, atur `VITE_DATA_SOURCE=local`. Mode tersebut memakai katalog contoh dan menyimpan pesanan di localStorage browser.

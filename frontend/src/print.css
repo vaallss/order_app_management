@@ -1,0 +1,12 @@
+@media print {
+  @page { margin: 12mm; }
+  .app-shell > * { display: none !important; }
+  .app-shell > main.dashboard-page { display: block !important; margin: 0; padding: 0; }
+  .dashboard-page > * { display: none !important; }
+  .dashboard-page > .order-list { display: block !important; }
+  .order-list > .staff-order { display: none !important; }
+  .order-list > .staff-order.printing-order { display: block !important; position: static; width: 100%; border: 0; padding: 0; }
+  .printing-order .order-side { display: none !important; }
+  .printing-order .order-main { max-width: 390px; margin: 0 auto; }
+  .printing-order .bill-box { break-inside: avoid; }
+}

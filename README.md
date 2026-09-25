@@ -1,58 +1,33 @@
-# ⚡ LSP Decoupled Starter Stack
+# Dapur Ina Aina
 
-Starter template bersih (kosongan) untuk proyek **LSP**:
-- **Frontend**: React JS (Vite + Tailwind CSS v4 + Axios)
-- **Backend**: Laravel 11 REST API (PHP)
-- **Database**: MySQL
+Aplikasi pemesanan restoran dengan React/Vite, Laravel API, dan MySQL.
 
----
+Untuk memahami alur aplikasi, tabel, endpoint, dan fungsi file sebelum presentasi, baca [DOKUMENTASI.md](DOKUMENTASI.md).
 
-## 📁 Struktur Folder
+## Menjalankan lokal
 
-```text
-LSP/
-├── frontend/             # React JS (Vite + Tailwind CSS v4)
-│   ├── src/
-│   │   ├── components/   # Simpan komponen UI kamu di sini
-│   │   ├── pages/        # Simpan halaman web kamu di sini
-│   │   ├── services/
-│   │   │   └── api.js    # Client Axios terkonfigurasi ke http://localhost:8000/api
-│   │   ├── App.jsx       # Canvas awal ngoding
-│   │   ├── index.css     # Setup Tailwind CSS
-│   │   └── main.jsx
-│   └── package.json
-│
-├── backend/              # Laravel 11 REST API
-│   ├── app/
-│   │   ├── Http/Controllers/ # Taruh Controller API kamu di sini
-│   │   └── Models/           # Taruh Eloquent Model di sini
-│   ├── database/
-│   │   ├── migrations/       # Taruh migration tabel DB di sini
-│   │   └── seeders/          # Database seeder
-│   ├── routes/
-│   │   └── api.php           # Daftarkan endpoint REST API di sini
-│   ├── config/cors.php       # CORS sudah diset allow origin dari React
-│   ├── .env                  # Konfigurasi database MySQL
-│   └── composer.json
-│
-└── README.md
+Pastikan PHP 8.3, Composer, Node.js, dan MySQL Laragon tersedia. `backend/.env` harus menunjuk ke database `dapur_aina`. Persiapan pertama kali:
+
+```powershell
+cd backend
+composer install
+php artisan migrate
+cd ..\frontend
+npm install
 ```
 
----
+Setelah itu, buka dua terminal VS Code dari folder proyek:
 
-## 🚀 Cara Menjalankan
+```powershell
+cd backend
+php artisan serve
+```
 
-### Frontend (React):
-```bash
+```powershell
 cd frontend
 npm run dev
 ```
-Akses di: `http://localhost:5173`
 
-### Backend (Laravel):
-```bash
-cd backend
-composer install
-php artisan serve
-```
-API endpoint di: `http://localhost:8000/api`
+Buka alamat Vite yang muncul di terminal, biasanya `http://localhost:5173`.
+
+Login staf lokal: `admin` / `123` dan `kasir` / `123`. Ganti password sederhana ini sebelum aplikasi dipakai online.
